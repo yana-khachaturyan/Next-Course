@@ -1,0 +1,23 @@
+{
+  "name": "next-course",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve": "concurrently \"npm run dev\" \"npm run mock\"",
+    "mock": "json-server -w db.json -p 4200 -d 450"
+  },
+  "dependencies": {
+    "@next/font": "13.1.2",
+    "isomorphic-unfetch": "^4.0.2",
+    "next": "13.1.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
