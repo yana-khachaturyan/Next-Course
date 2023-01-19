@@ -14,7 +14,7 @@ export default  function Post (props){
     </MainLayout>
     <div className="container">
     <div className="card border-primary mb-3" key={posts.id}>
-    <div className="card-header">{posts.title}</div>
+    <div className="card-header">{posts.id} {posts.title}</div>
     <div className="card-body">
       <p className="card-text">{posts.body}</p>
               </div>
