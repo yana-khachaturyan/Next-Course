@@ -13,9 +13,11 @@ export function MainLayout ({children, title='Next App'}){
             <meta name="description" content="this is just example of next"/>
         </Head>
         <nav>
-        <Link href={'/'}><h3> Home </h3></Link>
-        <Link href={'/about'}><h3>About </h3></Link>
-        <Link href={'/posts'}><h3>Posts </h3></Link>
+        <Link href={'/'}><h4> Home </h4></Link>
+        <Link href={'/about/'}><h4>About </h4></Link>
+        <Link href={'/posts/'}><h4>Posts </h4></Link>
+        <Link href={'/post/id/'}><h4>Post </h4></Link>
+        <Link href={'/about/article/'}><h4>Articles </h4></Link>
         </nav>
             <main>
                 {children}

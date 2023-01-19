@@ -1,0 +1,1 @@
+export const API_KEY="It would be api-key"
