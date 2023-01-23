@@ -1,6 +1,7 @@
 // import {useState, useEffect} from 'react'
 import fetch from "isomorphic-unfetch";
-import { MainLayout } from "components/MainLayout"  
+import { MainLayout } from "../components/MainLayout"  
+
 
 const Posts = (props) => {
 

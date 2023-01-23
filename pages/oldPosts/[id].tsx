@@ -1,7 +1,7 @@
-import { MainLayout } from "components/MainLayout"
+import { MainLayout } from "../../components/MainLayout"
 import Link from "next/link"
 //import { useRouter } from "next/router"
-export default  function Post (props){
+export default  function OldPosts (props){
        
     const {posts} = props;
     console.log(posts)
@@ -26,7 +26,7 @@ export default  function Post (props){
     )
 
 }
-Post.getInitialProps = async(ctx) => {
+OldPosts.getInitialProps = async(ctx) => {
     const data = await fetch (`https://jsonplaceholder.typicode.com/posts/${ctx.query.id}/`);
     const result= await data.json();
 
