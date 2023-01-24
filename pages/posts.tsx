@@ -3,7 +3,7 @@ import fetch from "isomorphic-unfetch";
 import { MainLayout } from "../components/MainLayout"  
 
 
-const Posts = (props) => {
+const Posts = (props:any) => {
 
     //  const [posts, setPosts] = useState ([])
     //  useEffect(()=> {
@@ -23,12 +23,12 @@ const Posts = (props) => {
     
     </MainLayout>
 
-    <div className="container">
-        {posts.map(posts=>( <>
-              <div className="card border-primary mb-3" key={posts.id}>
-              <div className="card-header">{posts.id} {posts.title}</div>
+    <div className="container ">
+        {posts.map((post:any)=>( <>
+              <div className="card border-primary mb-3" key={post.id}>
+              <div className="card-header">{post.id} {post.title}</div>
               <div className="card-body">
-                <p className="card-text">{posts.body}</p>
+                <p className="card-text">{post.body}</p>
               </div>
               </div>
             </>

@@ -1,6 +1,6 @@
 import '../styles/main.scss'
 import NextNProgress from 'nextjs-progressbar';
-
+import 'bootstrap/dist/css/bootstrap.css';
 export default function MyApp({Component, pageProps}) {
     return (
     <> 

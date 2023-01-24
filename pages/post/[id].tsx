@@ -12,17 +12,18 @@ interface PostPageProps {
 export default function Post({ post: serverPost }: PostPageProps) {
   const [post, setPost] = useState(serverPost)
   const router = useRouter()
-
+  async function load() {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${router.query.id}`)
+    const data = await response.json()
+    setPost(data)
+  }
   useEffect(() => {
-    async function load() {
-      const response = await fetch(`https://jsonplaceholder.typicode.com/posts//posts/${router.query.id}`)
-      const data = await response.json()
-      setPost(data)
-    }
+console.log(serverPost,'serverPost');
 
-    if (!serverPost) {
+
+    // if (!serverPost) {
       load()
-    }
+    // }
   }, [])
 
   if (!post) {
@@ -34,7 +35,6 @@ export default function Post({ post: serverPost }: PostPageProps) {
   return(
     <MainLayout>
       <h1>{post.title}</h1>
-      <hr />
       <p>{post.body}</p>
       <Link href={'/posts'}>Back to all posts</Link>
     </MainLayout>
