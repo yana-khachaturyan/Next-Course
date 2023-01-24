@@ -41,9 +41,7 @@ const Posts = (props:any) => {
 
 Posts.getInitialProps= async (ctx)=> {
     const data = await fetch ('https://jsonplaceholder.typicode.com/posts/');
-    console.log(data,'data');
-    const result= await data.json();
-    console.log(result,'result');
+    const result= await data.json(); 
     return {
         posts: result
     }
